@@ -97,11 +97,16 @@ header {
     text-decoration: none;
     color: black;
 }
-@media (min-width: 40em) {
-    section {
-        padding: 7em 0; 
-    }
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem);
 }
+
+.split {
+    display: flex;
+    flex-direction: row;
+}   
 
 @media (max-width: 40em) {
     header {
@@ -120,23 +125,23 @@ header {
     header a {
         text-align: center;
     }
+    .split {
+        flex-direction: column;
+    }
+    .container-footer {
+        flex-direction: column;
+    }
+    .ul-footer {
+        flex-direction: column
+    }
 }
-
-.container {
-    margin-inline: auto;
-    width: min(90%, 70.5rem);
-}
-
-.split {
-    display: flex;
-    flex-direction: row;
-}   
-
 @media (min-width: 40em) {
     .split {
         flex-direction: row;
     }
-
+    section {
+        padding: 7em 0; 
+    }
     .split > * {
         flex-basis: 100%;
     }
@@ -153,14 +158,6 @@ header {
         margin-right: 2em;
     }
 }
-
-@media (max-width: 40em) {
-    .split {
-        flex-direction: column;
-    }
-
-}
-
 .container--narrow {
     max-width: 34rem;
 }
@@ -170,7 +167,7 @@ header {
     filter: grayscale(45%);
 }
 .bg-1-text {
-    color:white; 
+    color: #e4e4e4; 
     text-shadow: 0 0 5px
 }
 
@@ -186,6 +183,32 @@ header {
 .bg-color4 { 
     color: var(--clr-neutral-100);
     background-color: rgb(158, 225, 215)
+}
+
+.bg-color5 {
+    background-color: #1b1b1b;
+}
+
+.container-footer {
+}
+.footer { 
+    display: flex;
+    flex-direction: column;
+}
+.footer p {
+    color: white;
+    align-items: center;
+}
+.footer-right {
+
+}
+.footer a {
+    text-decoration: none;
+    color: #e4e4e4;
+}
+
+.footer a:hover {
+    color: #adadad;
 }
 
 /* nav bar animation */
@@ -217,4 +240,48 @@ header {
 .linkani:hover::before,
 .linkani:hover::after {
     transform: scaleX(1);
+}
+
+/* footer soial media buttons stuff */
+
+.ul-footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.ul-footer li {
+    list-style-type: none;
+}
+
+.ul-footer li a {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s
+}
+.ul-footer li a:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.ul-footer li a .fab {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size: 24px;
+    color: #262626;
+    transition: .5s;
 }

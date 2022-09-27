@@ -132,7 +132,7 @@ header {
         flex-direction: column;
     }
     .ul-footer {
-        flex-direction: column
+        flex-direction: row;
     }
 }
 @media (min-width: 40em) {
@@ -173,7 +173,7 @@ header {
 
 .bg-color3 {
     color: var(--clr-neutral-100);
-    background-color: rgb(83, 78, 188)
+    background-color: rgb(65, 144, 214)
 }
 
 .bg-color3 img {
@@ -187,9 +187,6 @@ header {
 
 .bg-color5 {
     background-color: #1b1b1b;
-}
-
-.container-footer {
 }
 .footer { 
     display: flex;
